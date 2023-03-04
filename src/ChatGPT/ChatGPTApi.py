@@ -48,3 +48,17 @@ class ChatGPTBot:
         添加会话
         """
         self.conversation.append({"role": role, "content": content})
+
+    def __truncate_conversation(self):
+        """
+        对话超长时截断对话
+        """
+        while True:
+            full_conversation = "\n".join([x["content"] for x in self.conversation])
+            if (
+                    len(self.ENCODER.encode(full_conversation)) > self.max_tokens
+                    and len(self.conversation) > 1
+            ):
+                self.conversation.pop(1)
+            else:
+                break
