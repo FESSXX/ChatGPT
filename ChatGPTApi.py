@@ -42,3 +42,9 @@ class ChatGPTBot:
             response_role = "system"
         self.__add_conversation(response_role, response_message)
         return response_message
+
+    def __add_conversation(self, role: str, content: str):
+        """
+        添加会话
+        """
+        self.conversation.append({"role": role, "content": content})
