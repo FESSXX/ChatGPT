@@ -43,6 +43,14 @@ class ChatGPTBot:
         self.__add_conversation(response_role, response_message)
         return response_message
 
+    def reset(self):
+        """
+        重置对话
+        """
+        self.conversation = [
+            {"role": "system", "content": self.system_prompt},
+        ]
+
     def __add_conversation(self, role: str, content: str):
         """
         添加会话
