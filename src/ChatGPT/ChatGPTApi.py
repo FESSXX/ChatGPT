@@ -51,6 +51,15 @@ class ChatGPTBot:
             {"role": "system", "content": self.system_prompt},
         ]
 
+    def rollback(self, n: int = 1):
+        """
+        回滚对话
+        回滚默认回滚一条 但不是一次对话 即 USER：xxxx bot :xxx 回滚后 user：xxx
+        若想回滚一次对话 请传入2
+        """
+        for _ in range(n):
+            self.conversation.pop()
+
     def __add_conversation(self, role: str, content: str):
         """
         添加会话
