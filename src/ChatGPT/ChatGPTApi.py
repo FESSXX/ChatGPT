@@ -82,7 +82,6 @@ class ChatGPTBot:
     def get_token_count(self) -> int:
         """
         获取token总数
-        :return:
         """
         encoding = tiktoken.encoding_for_model(self.engine)
         num_tokens = 0
