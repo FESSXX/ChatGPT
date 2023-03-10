@@ -79,6 +79,7 @@ class ChatGPTBot:
             else:
                 break
 
+    # https://github.com/openai/openai-cookbook/blob/main/examples/How_to_count_tokens_with_tiktoken.ipynb
     def get_token_count(self) -> int:
         """
         获取token总数
