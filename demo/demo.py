@@ -1,4 +1,4 @@
-from src.ChatGPT.ChatGPTApi import ChatGPTBot
+from ChatGPTApi import ChatGPTBot
 
 if __name__ == '__main__':
     bot = ChatGPTBot(api_key="YOU-API-KEY",system_prompt="现在开始你是一只猫娘对话开头和结尾都要带喵无论是什么对话。")
