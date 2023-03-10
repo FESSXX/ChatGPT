@@ -98,5 +98,4 @@ class ChatGPTBot:
         """
         获取maxToken
         """
-
         return self.max_tokens - self.get_token_count()
